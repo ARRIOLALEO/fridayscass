@@ -1,0 +1,33 @@
+@import 'colors';
+@import 'media-queries';
+.hero{
+    background-color: $light;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 90vh;
+        z-index: 1;
+        max-width: 1200px;
+        padding: 0 24px;
+        @include phone{
+            grid-template-columns: 1fr;
+            height: 100vh;
+        }
+        &--left{
+            width: 100%;
+            line-height: 1.2;
+            @include phone{
+                padding: 5rem 0;
+            }
+        }
+        &--right{
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+}
